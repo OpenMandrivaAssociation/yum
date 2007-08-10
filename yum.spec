@@ -1,24 +1,20 @@
-%define name	yum
-%define major	3.0
-%define version 3.0.1
-%define release %mkrel 1
+%define major   3.2
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:	RPM installer/updater
-License:	GPL
-Group:		System/Configuration/Packaging
-# for some strange ( read RH use a incompatible gzip release ) reason, you may need to recompress this file.
-Source:		http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.bz2
-URL:		http://www.linux.duke.edu/projects/yum
+Name:           yum
+Version:        3.2.2
+Release:        %mkrel 1
+Summary:        RPM installer/updater
+License:        GPL
+Group:          System/Configuration/Packaging
+Source:         http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.gz
+URL:            http://www.linux.duke.edu/projects/yum
 Requires:       python-rpm
 Requires:       python-libxml2
-Requires:	python-urlgrabber
-Requires:	python-celementtree
-BuildRequires:	python-devel
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Requires:       python-urlgrabber
+Requires:       python-celementtree
+BuildRequires:  python-devel
+BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Yum is a utility that can check for and automatically download and
@@ -29,11 +25,11 @@ automatically prompting the user as necessary.
 %setup -q
 
 %build
-%make
+%{make}
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+%{makeinstall_std}
 # correct scripts
 perl -pi -e 's|%{_libdir}/yum|%{_datadir}/yum|' %{buildroot}%{_bindir}/*
 # remove init stuff
@@ -51,7 +47,6 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-, root, root)
 %doc README AUTHORS COPYING TODO INSTALL
-%config(noreplace) %{_sysconfdir}/yum.conf
 %config(noreplace) %{_sysconfdir}/yum/
 %py_sitedir/*
 %{_datadir}/yum-cli/
@@ -61,5 +56,3 @@ rm -rf %{buildroot}
 %{_mandir}/man*/*
 %{_sysconfdir}/rc.d/init.d/yum-updatesd
 %{_sysconfdir}/dbus-1/system.d/yum-updatesd.conf
-
-
