@@ -2,7 +2,7 @@
 
 Name:           yum
 Version:        3.2.2
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
@@ -55,4 +55,4 @@ rm -rf %{buildroot}
 /var/cache/yum
 %{_mandir}/man*/*
 %{_sysconfdir}/rc.d/init.d/yum-updatesd
-%{_sysconfdir}/dbus-1/system.d/yum-updatesd.conf
+%attr(0644,root,root) %{_sysconfdir}/dbus-1/system.d/yum-updatesd.conf
