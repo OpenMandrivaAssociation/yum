@@ -14,6 +14,7 @@ Requires:       python-urlgrabber
 Requires:       python-celementtree
 BuildRequires:  python-devel
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Yum is a utility that can check for and automatically download and
