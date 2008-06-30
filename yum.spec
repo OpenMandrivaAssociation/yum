@@ -2,7 +2,7 @@
 
 Name:           yum
 Version:        3.2.10
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
@@ -12,6 +12,8 @@ Requires:       python-rpm
 Requires:       python-libxml2
 Requires:       python-urlgrabber
 Requires:       python-celementtree
+Requires:       python-gpgme
+Requires:       yum-metadata-parser
 BuildRequires:  python-devel
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
