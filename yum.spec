@@ -15,6 +15,8 @@ Requires:       python-celementtree
 Requires:       python-gpgme
 Requires:       yum-metadata-parser
 BuildRequires:  python-devel
+BuildRequires:	gettext
+BuildRequires:  intltool
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
