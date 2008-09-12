@@ -2,7 +2,7 @@
 
 Name:           yum
 Version:        3.2.19
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
@@ -13,6 +13,7 @@ Requires:       python-libxml2
 Requires:       python-urlgrabber
 Requires:       python-celementtree
 Requires:       python-gpgme
+Requires:       python-iniparse
 Requires:       yum-metadata-parser
 BuildRequires:  python-devel
 BuildRequires:	gettext
