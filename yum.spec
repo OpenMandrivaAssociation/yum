@@ -1,8 +1,8 @@
 %define major   3.2
 
 Name:           yum
-Version:        3.2.19
-Release:        %mkrel 3
+Version:        3.2.20
+Release:        %mkrel 1
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
@@ -23,7 +23,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Yum is a utility that can check for and automatically download and
-install updated RPM packages. Dependencies are obtained and downloaded 
+install updated RPM packages. Dependencies are obtained and downloaded
 automatically prompting the user as necessary.
 
 %prep
