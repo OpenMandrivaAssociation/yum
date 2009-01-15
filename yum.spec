@@ -1,7 +1,7 @@
 %define major   3.2
 
 Name:           yum
-Version:        3.2.20
+Version:        3.2.21
 Release:        %mkrel 1
 Summary:        RPM installer/updater
 License:        GPL
