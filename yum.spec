@@ -2,7 +2,7 @@
 
 Name:           yum
 Version:        3.2.21
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
