@@ -1,8 +1,8 @@
 %define major   3.2
 
 Name:           yum
-Version:        3.2.21
-Release:        %mkrel 2
+Version:        3.2.24
+Release:        %mkrel 1
 Summary:        RPM installer/updater
 License:        GPL
 Group:          System/Configuration/Packaging
@@ -42,7 +42,7 @@ rm -f %{buildroot}%{_sysconfdir}/cron.*/yum.cron
 rm -f %{buildroot}%{_sysconfdir}/init.d/%{name}
 rm -f %{buildroot}%{_sysconfdir}/rc.d/init.d/%{name}
 rm -f %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
-rm -Rf  %{buildroot}/%py_sitedir/urlgrabber/
+rm -Rf  %{buildroot}/%py_puresitedir/urlgrabber/
 
 %find_lang %{name}
 
@@ -53,7 +53,7 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %doc README AUTHORS COPYING TODO INSTALL
 %config(noreplace) %{_sysconfdir}/yum/
-%py_sitedir/*
+%py_puresitedir/*
 %{_datadir}/yum-cli/
 %{_bindir}/*
 %{_sbindir}/*
