@@ -1,7 +1,7 @@
 %define major   3.2
 
 Name:           yum
-Version:        3.2.25
+Version:        3.2.27
 Release:        %mkrel 1
 Summary:        RPM installer/updater
 License:        GPL
@@ -58,6 +58,7 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_sbindir}/*
 /var/cache/yum
+%{_sysconfdir}/bash_completion.d/yum.bash
 %{_mandir}/man*/*
 %{_sysconfdir}/rc.d/init.d/yum-updatesd
 %attr(0644,root,root) %{_sysconfdir}/dbus-1/system.d/yum-updatesd.conf
