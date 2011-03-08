@@ -1,10 +1,10 @@
 %define major   3.2
 
 Name:           yum
-Version:        3.2.28
-Release:        %mkrel 2
+Version:        3.2.29
+Release:        %mkrel 1
 Summary:        RPM installer/updater
-License:        GPL
+License:        GPLv3+
 Group:          System/Configuration/Packaging
 Source:         http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.gz
 URL:            http://www.linux.duke.edu/projects/yum
@@ -61,4 +61,7 @@ rm -rf %{buildroot}
 %{_sysconfdir}/bash_completion.d/yum.bash
 %{_mandir}/man*/*
 %{_sysconfdir}/rc.d/init.d/yum-updatesd
+%{_sysconfdir}/cron.daily/0yum.cron
+%{_sysconfdir}/rc.d/init.d/yum-cron
+%{_sysconfdir}/sysconfig/yum-cron
 %attr(0644,root,root) %{_sysconfdir}/dbus-1/system.d/yum-updatesd.conf
