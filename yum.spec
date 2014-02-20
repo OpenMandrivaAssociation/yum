@@ -29,10 +29,9 @@ automatically prompting the user as necessary.
 %setup -q
 
 %build
-%{make}
+%make
 
 %install
-rm -rf %{buildroot}
 %{makeinstall_std}
 # correct scripts
 perl -pi -e 's|%{_libdir}/yum|%{_datadir}/yum|' %{buildroot}%{_bindir}/*
@@ -45,11 +44,7 @@ rm -Rf  %{buildroot}/%py_puresitedir/urlgrabber/
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-, root, root)
 %doc README AUTHORS COPYING TODO INSTALL
 %config(noreplace) %{_sysconfdir}/yum/
 %py_puresitedir/*
