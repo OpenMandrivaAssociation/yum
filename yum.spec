@@ -1,24 +1,24 @@
 %define major   3.2
 
-Name:           yum
-Version:        3.2.29
-Release:        2
-Summary:        RPM installer/updater
-License:        GPLv3+
-Group:          System/Configuration/Packaging
-Source:         http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.gz
-URL:            http://www.linux.duke.edu/projects/yum
-Requires:       python-rpm
-Requires:       python-libxml2
-Requires:       python-urlgrabber
-Requires:       python-celementtree
-Requires:       python-gpgme
-Requires:       python-iniparse
-Requires:       yum-metadata-parser
-BuildRequires:  python-devel
+Name:			yum
+Version:		3.2.29
+Release:		3
+Summary:		RPM installer/updater
+License:		GPLv3+
+Group:			System/Configuration/Packaging
+Source0:		http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.gz
+URL:			http://www.linux.duke.edu/projects/yum
+Requires:		python-rpm
+Requires:		python-libxml2
+Requires:		python-urlgrabber
+Requires:		python2-celementtree
+Requires:		python-gpgme
+Requires:		python-iniparse
+Requires:		yum-metadata-parser
+BuildRequires:	pkgconfig(python2)
 BuildRequires:	gettext
-BuildRequires:  intltool
-BuildArch:      noarch
+BuildRequires:	intltool
+BuildArch:		noarch
 
 %description
 Yum is a utility that can check for and automatically download and
