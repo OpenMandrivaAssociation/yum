@@ -30,7 +30,7 @@ automatically prompting the user as necessary.
 
 %build
 export PYTHON="%{_python2}"
-%make
+%make PYTHON="%{_python2}"
 
 %install
 %{makeinstall_std}
