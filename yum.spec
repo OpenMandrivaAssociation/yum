@@ -29,6 +29,7 @@ automatically prompting the user as necessary.
 %setup -q
 
 %build
+export PYTHON="%{_python2}"
 %make
 
 %install
@@ -40,14 +41,14 @@ rm -f %{buildroot}%{_sysconfdir}/cron.*/yum.cron
 rm -f %{buildroot}%{_sysconfdir}/init.d/%{name}
 rm -f %{buildroot}%{_sysconfdir}/rc.d/init.d/%{name}
 rm -f %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
-rm -Rf  %{buildroot}/%py_puresitedir/urlgrabber/
+rm -Rf  %{buildroot}/%py2_puresitedir/urlgrabber/
 
 %find_lang %{name}
 
 %files -f %{name}.lang
 %doc README AUTHORS COPYING TODO INSTALL
 %config(noreplace) %{_sysconfdir}/yum/
-%py_puresitedir/*
+%py2_puresitedir/*
 %{_datadir}/yum-cli/
 %{_bindir}/*
 %{_sbindir}/*
