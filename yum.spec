@@ -33,7 +33,8 @@ export PYTHON=%{__python2}
 %make PYTHON=%{__python2}
 
 %install
-%{makeinstall_std}
+%{makeinstall_std} PYTHON=%{__python2}
+
 # correct scripts
 perl -pi -e 's|%{_libdir}/yum|%{_datadir}/yum|' %{buildroot}%{_bindir}/*
 # remove init stuff
