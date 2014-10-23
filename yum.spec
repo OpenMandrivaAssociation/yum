@@ -29,8 +29,8 @@ automatically prompting the user as necessary.
 %setup -q
 
 %build
-export PYTHON=%{_python2}
-%make PYTHON=%{_python2}
+export PYTHON=%{__python2}
+%make PYTHON=%{__python2}
 
 %install
 %{makeinstall_std}
