@@ -2,7 +2,7 @@
 
 Name:			yum
 Version:		3.2.29
-Release:		3
+Release:		4
 Summary:		RPM installer/updater
 License:		GPLv3+
 Group:			System/Configuration/Packaging
