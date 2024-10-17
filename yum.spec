@@ -7,7 +7,7 @@ Summary:		RPM installer/updater
 License:		GPLv3+
 Group:			System/Configuration/Packaging
 Source0:		http://linux.duke.edu/projects/yum/download/%{major}/%{name}-%{version}.tar.gz
-URL:			http://www.linux.duke.edu/projects/yum
+URL:			https://www.linux.duke.edu/projects/yum
 Requires:		python-rpm
 Requires:		python-libxml2
 Requires:		python-urlgrabber
