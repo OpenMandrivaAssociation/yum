@@ -15,6 +15,7 @@ Requires:		python2-celementtree
 Requires:		python-gpgme
 Requires:		python-iniparse
 Requires:		yum-metadata-parser
+BuildRequires:	make
 BuildRequires:	pkgconfig(python2)
 BuildRequires:	gettext
 BuildRequires:	intltool
